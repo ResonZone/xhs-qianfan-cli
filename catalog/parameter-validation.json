@@ -1,0 +1,2907 @@
+{
+  "generatedAt": "2026-08-27T05:12:25.663Z",
+  "scope": "current account, read-only UI partitions; arbitrary value Cartesian products are out of scope",
+  "policy": {
+    "minimumIntervalMs": 15000,
+    "noWriteActions": true,
+    "retryOnHttp4xxOr5xx": 0,
+    "resourceIdentifiers": "Use only an already visible authorized row; never invent or persist raw IDs."
+  },
+  "summary": {
+    "observedOperationCount": 138,
+    "plannedActionCount": 43,
+    "completedActionCount": 43,
+    "routeNavigationCount": 29,
+    "familyActions": {
+      "date_time": {
+        "plannedOrAttempted": 28,
+        "performed": 27,
+        "skipped": 1,
+        "actionErrors": 0,
+        "requestCount": 99,
+        "http200Records": 98
+      },
+      "filter": {
+        "plannedOrAttempted": 11,
+        "performed": 11,
+        "skipped": 0,
+        "actionErrors": 0,
+        "requestCount": 11,
+        "http200Records": 11
+      },
+      "sort": {
+        "plannedOrAttempted": 1,
+        "performed": 1,
+        "skipped": 0,
+        "actionErrors": 0,
+        "requestCount": 1,
+        "http200Records": 1
+      },
+      "export": {
+        "plannedOrAttempted": 1,
+        "performed": 1,
+        "skipped": 0,
+        "actionErrors": 0,
+        "requestCount": 2,
+        "http200Records": 2
+      },
+      "resource_identifier": {
+        "plannedOrAttempted": 1,
+        "performed": 1,
+        "skipped": 0,
+        "actionErrors": 0,
+        "requestCount": 0,
+        "http200Records": 0
+      },
+      "pagination": {
+        "plannedOrAttempted": 1,
+        "performed": 1,
+        "skipped": 0,
+        "actionErrors": 0,
+        "requestCount": 1,
+        "http200Records": 1
+      }
+    },
+    "validationStateCounts": {
+      "ZERO_INPUT_OBSERVED": 19,
+      "PARTITION_OBSERVED_HTTP_200": 94,
+      "RESOURCE_VALUE_NOT_REPLAYED": 9,
+      "FIXED_BOOTSTRAP_OR_ROUTE_CONSTANT": 5,
+      "MULTIPLE_PASSIVE_EXAMPLES": 8,
+      "PARTITION_FAILED_HTTP_500": 1,
+      "GRAY_GATED_FIXED_INPUT": 1,
+      "WRITE_OR_JOB_BLOCKED_NOT_REPLAYED": 1
+    },
+    "actionHttpStatusCounts": {
+      "200": 113,
+      "500": 1
+    },
+    "exportActions": [
+      {
+        "id": "/app-datacenter/good-data:export",
+        "performed": true,
+        "downloadEvent": true,
+        "extension": ".xlsx",
+        "temporaryFileRetained": false,
+        "actionError": null
+      }
+    ]
+  },
+  "entries": [
+    {
+      "id": "common.ark-mio-homepage-guide-config",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/agentplatform/ark/mio/homepage/guide-config",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.agentplatform-ark-mio-showbanner",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/agentplatform/ark/mio/showbanner",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 4,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.ark-ai-list-quick-point",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/ark/ai/list_quick_point",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "entryId"
+      ]
+    },
+    {
+      "id": "common.bench-sidebar",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/bench/sidebar",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "FIXED_BOOTSTRAP_OR_ROUTE_CONSTANT",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.bench-topbar",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/bench/topbar",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.business-data-metric-dictionary-batchsearch",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business_data/metric_dictionary/batchsearch",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "ids"
+      ]
+    },
+    {
+      "id": "common.business-data-slogan",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business/data/slogan",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.cs-check-help-cs",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/cs/check_help_cs",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "bUserId"
+      ]
+    },
+    {
+      "id": "common.cs-fe-apollo",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/cs/fe/apollo",
+      "operation": null,
+      "parameterFamilies": [
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.cs-pc-tools",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/cs/pc/tools",
+      "operation": null,
+      "parameterFamilies": [
+        "filter",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "bUserId"
+      ]
+    },
+    {
+      "id": "common.fulfillment-delivery-revamp-gray",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/fulfillment/delivery/revamp/gray",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.home-get-shop-score",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/home/get_shop_score",
+      "operation": null,
+      "parameterFamilies": [
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "FIXED_BOOTSTRAP_OR_ROUTE_CONSTANT",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.message-query-pop-window",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/message/query_pop_window",
+      "operation": null,
+      "parameterFamilies": [
+        "filter"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "FIXED_BOOTSTRAP_OR_ROUTE_CONSTANT",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.message-query-pop-window-am",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/message/query_pop_window_am",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 1,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.open-message-v2-unread-count",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/open/message/v2/unread-count",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.toc-robin-application-89",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/89",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.redbreast-toc-robin-trigger",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/trigger",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "applicationId",
+        "userId"
+      ]
+    },
+    {
+      "id": "common.seller-info-v2",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/seller/info/v2",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.seller-vender-info",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/seller/vender/info",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.resource-plan-batch-get",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/rocking/tob/resource/plan/batch/get",
+      "operation": null,
+      "parameterFamilies": [
+        "filter",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "resource_query_list.item.resource_id"
+      ]
+    },
+    {
+      "id": "common.seller-common-query-hit-gray",
+      "domains": [
+        "common"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/edith/api/seller/common/query_hit_gray",
+      "operation": null,
+      "parameterFamilies": [
+        "filter"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "FIXED_BOOTSTRAP_OR_ROUTE_CONSTANT",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "common.seller-query-quality-merchant-type",
+      "domains": [
+        "common"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/edith/api/seller/query_quality_merchant_type",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 1,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.anchor-living-room-list",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "anchorLivingRoomList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.seller-live-detail-data",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerLiveDetailData",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.seller-live-anchor-list",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerLiveAnchorList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.seller-live-anchor-data-overall",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerLiveAnchorDataOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.ark-seller-live-main-account",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerLiveMainAccount",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.live-seller-data-over-all",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveSellerDataOverAll",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.live-data-item-list-v2",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataItemListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.live-data-anchor-list",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataAnchorList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "livestream.live-data-anchor-over-all",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataAnchorOverAll",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.live-data-anchor-item-list",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataAnchorItemList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.live-data-anchor-flow-detail",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataAnchorFlowDetail",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_FAILED_HTTP_500",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [
+        500
+      ],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.live-data-anchor-trans-funnel",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataAnchorTransFunnel",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.live-data-anchor-room-list",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "liveDataAnchorRoomList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.anchorId"
+      ]
+    },
+    {
+      "id": "livestream.display-advertising-performance-query",
+      "domains": [
+        "livestream"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/live/commerce/display/advertising/performance/query",
+      "operation": null,
+      "parameterFamilies": [
+        "filter",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "host_id",
+        "room_id"
+      ]
+    },
+    {
+      "id": "livestream.live-replay-overview",
+      "domains": [
+        "livestream"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/live/replay/overview",
+      "operation": null,
+      "parameterFamilies": [
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "liveId"
+      ]
+    },
+    {
+      "id": "livestream.live-replay-traffic-core",
+      "domains": [
+        "livestream"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/live/replay/traffic/core",
+      "operation": null,
+      "parameterFamilies": [
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "liveId"
+      ]
+    },
+    {
+      "id": "market.data-live-tops-filter",
+      "domains": [
+        "market"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/business/data/live/tops/filter",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "market.top-live-data-search",
+      "domains": [
+        "market"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/business/data/top/live/data/search",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "firstCategoryId",
+        "secondCategoryId"
+      ]
+    },
+    {
+      "id": "market.top-live-self-data",
+      "domains": [
+        "market"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/business/data/top/live/self/data",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "firstCategoryId",
+        "secondCategoryId"
+      ]
+    },
+    {
+      "id": "marketing.mkt-gray-access",
+      "domains": [
+        "marketing"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/mkt/gray_access",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "GRAY_GATED_FIXED_INPUT",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.mkt-marketing-act-detail",
+      "domains": [
+        "marketing"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/mkt/marketing_act_detail",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "pagination"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.mkt-marketing-overview-data",
+      "domains": [
+        "marketing"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/mkt/marketing_overview_data",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.mkt-marketing-overview-data-config",
+      "domains": [
+        "marketing"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/mkt/marketing_overview_data_config",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.mkt-marketing-tool-data",
+      "domains": [
+        "marketing"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/mkt/marketing_tool_data",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.mkt-metric-config-list",
+      "domains": [
+        "marketing"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/mkt/metric_config_list",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.mkt-query-marketing-tool-sku-effect",
+      "domains": [
+        "marketing"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/mkt/query_marketing_tool_sku_effect",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketing.toc-robin-application-80",
+      "domains": [
+        "marketing"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/80",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketplace.business-data-item-catagory",
+      "domains": [
+        "marketplace",
+        "product",
+        "service",
+        "trade"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business_data/item/catagory",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time"
+      ],
+      "parameterExampleCount": 4,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketplace.seller2-tab-status",
+      "domains": [
+        "marketplace",
+        "traffic"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "seller2TabStatus",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketplace.seller2-tab-data-overall",
+      "domains": [
+        "marketplace"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "seller2TabDataOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketplace.seller2-tab-refund-overall",
+      "domains": [
+        "marketplace"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "seller2TabRefundOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "marketplace.seller2-tab-item-list",
+      "domains": [
+        "marketplace"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "seller2TabItemList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.business-data-goods-note-category-list",
+      "domains": [
+        "note"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business_data/goods_note/category/list",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.ark-block-key-vaild-date-list",
+      "domains": [
+        "note",
+        "search",
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkBlockKeyVaildDateList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.ark-seller-note-account-list",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerNoteAccountList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "MULTIPLE_PASSIVE_EXAMPLES",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.ark-seller-note-goods-note-overall",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerNoteGoodsNoteOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "note.ark-seller-note-goods-note-core-overall",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerNoteGoodsNoteCoreOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "note.ark-seller-note-goods-note-data-list",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerNoteGoodsNoteDataList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.ark-seller-note-goods-note-channel-list",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerNoteGoodsNoteChannelList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "note.seller-shopping-note-user-list",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShoppingNoteUserList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.seller-shopping-note-overall",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShoppingNoteOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.seller-shopping-note-user-overall",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShoppingNoteUserOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.seller-shopping-note-detail-list",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShoppingNoteDetailList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.firstCategoryId",
+        "requestBody.blockElements.item.filterMap.secondCategoryId"
+      ]
+    },
+    {
+      "id": "note.seller-note-cmt-blue-anthor-search",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerNoteCmtBlueAnthorSearch",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.seller-note-cmt-blue-overall",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerNoteCmtBlueOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "note.seller-note-cmt-blue-note-table",
+      "domains": [
+        "note"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerNoteCmtBlueNoteTable",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.business-data-realtime-overview-v2",
+      "domains": [
+        "overview"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business_data/realtime_overview_v2",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.business-data-realtime-trend-v2",
+      "domains": [
+        "overview"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business_data/realtime_trend_v2",
+      "operation": null,
+      "parameterFamilies": [
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.seller-carrier-channel-overall",
+      "domains": [
+        "overview",
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCarrierChannelOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.express-rank-data-v2",
+      "domains": [
+        "overview"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "expressRankDataV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.service-express-overall",
+      "domains": [
+        "overview"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "serviceExpressOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.service-express-trend",
+      "domains": [
+        "overview"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "serviceExpressTrend",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.recommend-data",
+      "domains": [
+        "overview"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/recommend/data",
+      "operation": null,
+      "parameterFamilies": [
+        "filter"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "FIXED_BOOTSTRAP_OR_ROUTE_CONSTANT",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "overview.toc-robin-application-62",
+      "domains": [
+        "overview"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/62",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "product.business-data-realtime-item-v2",
+      "domains": [
+        "product"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/business_data/realtime_item_v2",
+      "operation": null,
+      "parameterFamilies": [
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "product.ark-seller-overall-sum-data",
+      "domains": [
+        "product",
+        "traffic"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerOverallSumData",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "product.goods-overall-seller-nitem-rank-list-v3",
+      "domains": [
+        "product"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "goodsOverallSellerNItemRankListV3",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "product.ark-seller-category-data-list-v2",
+      "domains": [
+        "product"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "arkSellerCategoryDataListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "product.long-task-task-detail",
+      "domains": [
+        "product"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/long_task/task/detail",
+      "operation": null,
+      "parameterFamilies": [
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "RESOURCE_VALUE_NOT_REPLAYED",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "task_id"
+      ]
+    },
+    {
+      "id": "product.long-task-task-submit",
+      "domains": [
+        "product"
+      ],
+      "method": "POST",
+      "risk": "write",
+      "path": "/api/edith/long_task/task/submit",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 1,
+      "validationState": "WRITE_OR_JOB_BLOCKED_NOT_REPLAYED",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "input.extra.sellerId"
+      ]
+    },
+    {
+      "id": "product.toc-robin-application-64",
+      "domains": [
+        "product"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/64",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "search.seller-search-overall-v2",
+      "domains": [
+        "search"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerSearchOverallV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "search.seller-search-carrier-overall-v2",
+      "domains": [
+        "search"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerSearchCarrierOverallV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "search.seller-search-carrier-user-list-v2",
+      "domains": [
+        "search"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerSearchCarrierUserListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "search.seller-search-carrier-list-v2",
+      "domains": [
+        "search"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerSearchCarrierListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "search.seller-search-query-list-v2",
+      "domains": [
+        "search"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerSearchQueryListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "search.toc-robin-application-253",
+      "domains": [
+        "search"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/253",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.comment-data-overall",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "commentDataOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.comment-detail-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "commentDetailList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.item-comment-detail-list-v2",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "itemCommentDetailListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.after-sale-overall",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "afterSaleOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.seller-express-overall",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerExpressOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.seller-express-company-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerExpressCompanyList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.seller-csoverall",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCSOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.seller-cscase-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCSCaseList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.csaUserId"
+      ]
+    },
+    {
+      "id": "service.seller-csreasons-desc-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCSReasonsDescList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.seller-csuser-info-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCSUserInfoList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "service.single-item-comment-detail-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "singleItemCommentDetailList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.itemId"
+      ]
+    },
+    {
+      "id": "service.item-comment-review-detail-list",
+      "domains": [
+        "service"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "itemCommentReviewDetailList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.itemId"
+      ]
+    },
+    {
+      "id": "shop.seller-core-page-flow",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/business_data/seller/core/page/flow",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.seller-page-source-advice",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/business_data/seller/page/source/advice",
+      "operation": null,
+      "parameterFamilies": [
+        "date_time",
+        "filter"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.seller-shop-source-overall",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShopSourceOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.seller-shop-source-trend",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShopSourceTrend",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.seller-shop-page-overall",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShopPageOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.seller-shop-page-trend",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerShopPageTrend",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.ark-chat-overall",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "ArkChatOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.ark-chat-carrier-table",
+      "domains": [
+        "shop"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "ArkChatCarrierTable",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "shop.toc-robin-application-254",
+      "domains": [
+        "shop"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/254",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-deal-carrier-overall",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealCarrierOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-deal-account-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealAccountList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-trd-pop-comp-overall-v2",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerTrdPopCompOverallV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-carrier-channel-trend",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCarrierChannelTrend",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-deal-carrier-account-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealCarrierAccountList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-deal-single-account-overall",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealSingleAccountOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "trade.seller-deal-single-account-carrier-overall",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealSingleAccountCarrierOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "trade.seller-deal-single-account-discovery-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealSingleAccountDiscoveryList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "trade.seller-deal-single-account-item-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDealSingleAccountItemList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.accountUserId"
+      ]
+    },
+    {
+      "id": "trade.seller-distributor-data-overall",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDistributorDataOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-distributor-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDistributorList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-distributor-data-by-carrier-type",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerDistributorDataByCarrierType",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-overall-sum-data-by-pay-time",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundOverallSumDataByPayTime",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-time-type-list-by-pay-time",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundTimeTypeListByPayTime",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-discovery-list-by-pay-time",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundDiscoveryListByPayTime",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-account-list-by-pay-time",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundAccountListByPayTime",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-reason-data-list-by-pay-time",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundReasonDataListByPayTime",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-item-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundItemList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-carrier-overall",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundCarrierOverall",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-account-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundAccountList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-category-data-list-v2",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundCategoryDataListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-overall-sum-data",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundOverallSumData",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-carrier-account-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundCarrierAccountList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-refund-reason-data-list",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerRefundReasonDataList",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "trade.seller-carrier-channel-detail-list-v2",
+      "domains": [
+        "trade"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCarrierChannelDetailListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "resource_identifier"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": [
+        "requestBody.blockElements.item.filterMap.packageIds",
+        "requestBody.blockElements.item.filterMap.newItemIds",
+        "requestBody.blockElements.item.filterMap.carrierPageId"
+      ]
+    },
+    {
+      "id": "traffic.seller-carrier-gmv-overall-v2",
+      "domains": [
+        "traffic"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCarrierGmvOverallV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "traffic.seller-carrier-data-list-v2",
+      "domains": [
+        "traffic"
+      ],
+      "method": "POST",
+      "risk": "read",
+      "path": "/api/edith/butterfly/data",
+      "operation": "sellerCarrierDataListV2",
+      "parameterFamilies": [
+        "date_time",
+        "filter",
+        "other",
+        "pagination",
+        "sort"
+      ],
+      "parameterExampleCount": 2,
+      "validationState": "PARTITION_OBSERVED_HTTP_200",
+      "partitionActionObserved": true,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    },
+    {
+      "id": "traffic.toc-robin-application-63",
+      "domains": [
+        "traffic"
+      ],
+      "method": "GET",
+      "risk": "read",
+      "path": "/api/edith/redbreast/api/toc/robin/application/63",
+      "operation": null,
+      "parameterFamilies": [],
+      "parameterExampleCount": 0,
+      "validationState": "ZERO_INPUT_OBSERVED",
+      "partitionActionObserved": false,
+      "partitionFailureStatuses": [],
+      "placeholders": []
+    }
+  ]
+}

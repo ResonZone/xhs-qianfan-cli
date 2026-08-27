@@ -1,0 +1,97 @@
+{
+  "observedAt": "2026-08-26T17:58:00+08:00",
+  "source": "GET /api/edith/bench/sidebar?system_code=system_ark_v3 via authenticated external Chrome CDP",
+  "status": 200,
+  "groups": [
+    {
+      "domain": "overview",
+      "name": "总览",
+      "routes": ["/app-datacenter/overview"]
+    },
+    {
+      "domain": "product",
+      "name": "商品",
+      "routes": [
+        "/app-datacenter/good-data",
+        "/app-datacenter/good-data/real-time",
+        "/app-datacenter/good-data/category-analysis"
+      ]
+    },
+    {
+      "domain": "traffic",
+      "name": "流量",
+      "routes": ["/app-datacenter/flow-overview"]
+    },
+    {
+      "domain": "note",
+      "name": "笔记",
+      "routes": [
+        "/app-datacenter/note-data/goods",
+        "/app-datacenter/note-cooperate",
+        "/app-datacenter/note-blue-chain"
+      ]
+    },
+    {
+      "domain": "livestream",
+      "name": "直播",
+      "routes": [
+        "/app-datacenter/live-list",
+        "/app-datacenter/live-overview-v2",
+        "/app-datacenter/anchor-analysis",
+        "/live_review"
+      ]
+    },
+    {
+      "domain": "trade",
+      "name": "交易",
+      "routes": [
+        "/app-datacenter/business-overview",
+        "/app-datacenter/business-account",
+        "/app-datacenter/business-cps",
+        "/app-datacenter/business-refund",
+        "/app-datacenter/business-order"
+      ]
+    },
+    {
+      "domain": "search",
+      "name": "搜索",
+      "routes": [
+        "/app-datacenter/search-overview",
+        "/app-datacenter/search-overview/words"
+      ]
+    },
+    {
+      "domain": "marketplace",
+      "name": "市集",
+      "routes": ["/app-datacenter/fair"]
+    },
+    {
+      "domain": "shop",
+      "name": "店铺",
+      "routes": [
+        "/app-datacenter/homepage",
+        "/app-datacenter/group-chat"
+      ]
+    },
+    {
+      "domain": "service",
+      "name": "服务",
+      "routes": [
+        "/app-datacenter/comment-overview",
+        "/app-datacenter/after-sale",
+        "/app-datacenter/logistics-data",
+        "/app-datacenter/customer-data"
+      ]
+    },
+    {
+      "domain": "market",
+      "name": "市场",
+      "routes": ["/app-datacenter/market/live-rank"]
+    },
+    {
+      "domain": "marketing",
+      "name": "营销",
+      "routes": ["/app-promotion/promotion-tools/analysis"]
+    }
+  ]
+}

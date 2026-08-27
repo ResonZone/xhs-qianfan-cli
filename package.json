@@ -1,0 +1,39 @@
+{
+  "name": "xhs-qianfan-cli",
+  "version": "0.3.0-beta.1",
+  "description": "Read-only, browser-session CLI for Xiaohongshu Qianfan merchant operations",
+  "type": "module",
+  "bin": {
+    "qianfan": "dist/src/index.js"
+  },
+  "files": [
+    "dist/src",
+    "dist/catalog",
+    "docs/API.md",
+    "README.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "dev": "tsx src/index.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@playwright/cli": "^0.1.17",
+    "commander": "^14.0.0",
+    "playwright-core": "^1.55.0"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.28.4",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

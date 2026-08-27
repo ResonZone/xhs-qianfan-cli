@@ -1,0 +1,45 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+coverage/
+
+# Local delivery artifacts and evidence
+outputs/
+work/
+*.tgz
+*.log
+
+# Browser automation state and credentials
+.playwright-cli/
+**/chrome-user-data/
+**/DevToolsActivePort
+**/SingletonCookie
+**/SingletonLock
+**/SingletonSocket
+**/profile.json
+**/runtime.json
+**/cache/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+.config/
+.codex/
+
+# Local reverse-engineering and capture pipeline
+scripts/*
+!scripts/copy-assets.mjs
+!scripts/generate-api-docs.mjs
+catalog/callsite-index.json
+catalog/parameter-plan.json
+docs/2026-*.md
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
